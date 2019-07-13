@@ -25,7 +25,7 @@ function test_command {
 				expect_files "/home/codio/workspace/test-website/index.html" "/home/codio/workspace/test-website/.website-config" "/home/codio/workspace/test-website/css/styles.css" "/home/codio/workspace/test-website/img/logo.png" "/home/codio/workspace/test-website/js/scripts.js"
 				;;
 			2 )
-				expect_commands "list test-website/css directory from ~/workspace folder" "ls test-website/css" "ls test-website/css/" "ls ~/workspace/test-website/css/" "ls ~/workspace/test-website/css"
+				expect_commands "list test-website/css directory from ~/workspace folder, including hidden files" "ls -a test-website/css" "ls -al test-website/css/" "ls -la test-website/css/" "ls -a ~/workspace/test-website/css/" "ls -al ~/workspace/test-website/css" "ls -la ~/workspace/test-website/css"
 				;;
             3 )
 				expect_command "clear" "clear terminal screen"
